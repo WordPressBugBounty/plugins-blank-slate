@@ -2,10 +2,12 @@
 Contributors: areimann, wpscholar
 Donate link: https://www.paypal.me/wpdonate
 Tags: blank, empty, canvas, landing, page builder
-Requires at least: 4.7
-Requires PHP: 5.3
-Tested up to: 6.1.1
-Stable tag: 1.2.2
+Requires at least: 5.8
+Requires PHP: 7.2
+Tested up to: 7.1
+Stable tag: 1.3.0
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Provides a blank page template for use with WordPress page builders.
 
@@ -26,11 +28,18 @@ This creates a page template giving you a blank page so only the content of the 
 3. Add New, or select an existing page
 4. Scroll down on the right (in theory) and select the page template called “Blank Slate”
 
+== Block themes ==
+
+On block themes (such as Twenty Twenty-Five) choose "Blank Slate" in the Template panel of the page or post settings (WordPress 6.7 or newer). Pages that already use the older "Blank Slate" template keep working. On classic themes, choose it in the Page Attributes > Template dropdown.
+
 == Other Notes ==
 
 This plugin will load everything that is normally included in the wp_head() and wp_footer(), so all scripts and styles should load as normal.
 
 == Upgrade Notice ==
+
+= 1.3.0 =
+* Works with block themes and the Site Editor. Requires WordPress 5.8 and PHP 7.2 or newer. Tested with WordPress 7.1 and PHP 8.5.
 
 = 1.2.2 =
 * Tested with PHP 8.0 and 8.1.
@@ -51,6 +60,15 @@ This plugin will load everything that is normally included in the wp_head() and 
 * The latest version of Blank Slate requires WordPress version 4.7 or greater! Compatible with version 5.0.
 
 == Changelog ==
+
+= 1.3.0 =
+* New: "Blank Slate" block template, so the template can be chosen on block themes (WordPress 6.7+).
+* Fix: "translation loading triggered too early" notice on WordPress 6.7+.
+* Maintenance: removed the wp_body_open() polyfill and load_plugin_textdomain() (WordPress.org loads translations automatically).
+* Maintenance: requires WordPress 5.8 and PHP 7.2; tested with WordPress 7.1 and PHP 8.5; license declared in the readme.
+
+= 1.2.2 =
+* Tested with PHP 8.0 and 8.1.
 
 = 1.2.1 =
 * Fix minor WP compatibility issue: wp_body_open().

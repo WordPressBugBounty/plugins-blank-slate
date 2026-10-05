@@ -1,9 +1,22 @@
+<?php
+/**
+ * Blank Slate page template: no header, no footer, just the content.
+ *
+ * Themes can override this by adding /blank-slate/blank-slate-template.php.
+ *
+ * @package BlankSlate
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="profile" href="https://gmpg.org/xfn/11">
 
 		<?php if ( ! get_theme_support( 'title-tag' ) ) : ?>
 			<title><?php wp_title(); ?></title>
